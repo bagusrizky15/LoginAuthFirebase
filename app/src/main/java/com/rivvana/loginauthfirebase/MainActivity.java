@@ -33,6 +33,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         login = (Button) findViewById(R.id.loginBtn);
         login.setOnClickListener(this);
 
+        editTextEmail = (EditText) findViewById(R.id.email);
+        editTextPassword = (EditText) findViewById(R.id.password);
+
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+
+
     }
 
     @Override
@@ -42,6 +48,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this,RegisterUser.class));
                 break;
 
+            case R.id.loginBtn:
+                userLogin();
+                break;
+
         }
+    }
+
+    private void userLogin(){
+        
     }
 }
